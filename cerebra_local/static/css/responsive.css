@@ -1,0 +1,273 @@
+/* Mobile First Responsive Design */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 575.98px) {
+    .main-container,
+    .large-container {
+        padding: 0 15px;
+    }
+
+    .cerebra-logo {
+        font-size: 32px;
+    }
+
+    .cerebra-logo-main {
+        font-size: 40px;
+    }
+
+    .f-32 {
+        font-size: 24px;
+    }
+
+    .f-40 {
+        font-size: 28px;
+    }
+
+    .fs-n {
+        font-size: 32px;
+    }
+
+    .fs-b {
+        font-size: 28px;
+    }
+
+    .bshadow {
+        padding: 20px;
+    }
+
+    .problems__container {
+        flex-direction: column;
+    }
+
+    .problems__item {
+        margin: 10px 0;
+        min-height: 300px;
+    }
+
+    .statistic__frame {
+        height: 300px;
+    }
+
+    .vertical-center {
+        min-height: 40vh;
+    }
+
+    .welcome--text {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .swiper-slide {
+        padding: 20px;
+    }
+
+    .footer__icons {
+        justify-content: center;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 767.98px) {
+    .menu-burger {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .lang {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .statistic__container,
+    .statistic__container_fff {
+        flex-direction: column;
+    }
+
+    .statistic__item {
+        border-left: none !important;
+        border-top: 1px solid var(--border-color) !important;
+        padding: 20px !important;
+    }
+
+    .statistic__item:first-child {
+        border-top: none !important;
+    }
+
+    .product__column {
+        flex-direction: column;
+    }
+
+    .product__title {
+        position: static;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .charitable_foundation_header {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .nav-desktop {
+        display: block;
+    }
+
+    .problems__container {
+        flex-wrap: nowrap;
+    }
+
+    .problems__item {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    .statistic_gender__img {
+        display: block !important;
+    }
+
+    .gender-img {
+        display: none !important;
+    }
+
+    .standart-img {
+        display: none !important;
+    }
+
+    .process-img {
+        display: none !important;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .main-container {
+        padding: 0 40px;
+    }
+
+    .large-container {
+        padding: 0 40px;
+    }
+
+    .cerebra-logo {
+        font-size: 56px;
+    }
+
+    .cerebra-logo-main {
+        font-size: 72px;
+    }
+
+    .problems__item {
+        max-width: 350px;
+    }
+
+    .bshadow {
+        padding: 60px;
+    }
+}
+
+/* Ultra wide screens (1400px and up) */
+@media (min-width: 1400px) {
+    .fs-n {
+        font-size: 56px;
+    }
+
+    .fs-b {
+        font-size: 48px;
+    }
+
+    .cerebra-logo-main {
+        font-size: 80px;
+    }
+}
+
+/* Hover effects for touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .nav-text:hover,
+    .problems__item:hover,
+    .footer-icon:hover,
+    .swiper-slide:hover {
+        transform: none;
+    }
+
+    .nav-text:active {
+        color: var(--primary-color);
+        background: rgba(25, 230, 154, 0.1);
+    }
+
+    .problems__item:active {
+        transform: scale(0.98);
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .cerebra-logo,
+    .cerebra-logo-main {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .scroll-item {
+        animation: none;
+    }
+
+    .problem__item-green {
+        animation: none;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #ffffff;
+        --text-muted: #cccccc;
+        --background-dark: #0a0a0a;
+        --background-light: #1a1a1a;
+    }
+}
+
+/* Print styles */
+@media print {
+    .header,
+    .menu-burger,
+    .footer__icons,
+    .swiper-button-prev,
+    .swiper-button-next,
+    .swiper-pagination {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    .bg-main {
+        background: white !important;
+    }
+
+    .bshadow {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+}
