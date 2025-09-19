@@ -1,14 +1,19 @@
+/* Define CSS Variables */
+:root {
+    --primary-color: #19E69A;
+    --text-color: #FFFFFF;
+    --background-dark: #0A0A0A;
+}
+
 /* Header Styles */
 .header {
-    backdrop-filter: none;
-    background: rgba(10, 10, 10, 0.9);
-    border-bottom: 1px solid var(--border-color);
-    z-index: -10;
-    transition: all 0.3s ease;
-    position: fixed; /* чтобы всегда держался сверху */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: -10; /* Оставляем как есть */
+    background: rgba(10, 10, 10, 1);
+    height: 60px; /* Фиксированная высота */
 }
 
 .logo img {
@@ -20,19 +25,42 @@
 }
 
 /* Navigation */
+/* Navigation */
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* равномерно распределяет */
-  gap: 20px; /* оставь небольшой */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 12px 20px;
-  background: rgba(10,10,10,0.95);
-  backdrop-filter: blur(8px);
-  z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    position: fixed;
+    top: 0; /* Или top: 60px, если .header используется */
+    left: 0;
+    width: 100%;
+    padding: 12px 20px;
+    background: rgba(10, 10, 10, 0.95);
+    -webkit-backdrop-filter: blur(4px); /* Снижаем blur для мягкости */
+    backdrop-filter: blur(4px); /* Ограничиваем эффект */
+    z-index: 100; /* Понижаем, чтобы не перекрывать всё */
+}
+
+/* Основной контейнер контента */
+body {
+    background: var(--background-dark);
+    padding-top: 80px; /* Отступ, чтобы контент не перекрывался .nav или .header */
+    position: relative;
+    z-index: 1; /* Контент выше фона, но ниже навигации */
+}
+
+/* Конкретные секции */
+.welcome--text, .statistic__frame, .problems__container {
+    position: relative;
+    z-index: 2; /* Контент выше навигации, но не мешает */
+}
+
+/* Отключаем blur, если не нужен */
+.nav.no-blur {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: rgba(10, 10, 10, 0.95);
 }
 
 .nav-text {
@@ -45,6 +73,19 @@
     border-radius: 8px;
     transition: all 0.3s ease;
     position: relative;
+}
+
+/* Для контента, чтобы он не перекрывался */
+.welcome--text, .statistic__frame, .problems__container {
+    position: relative;
+    z-index: 1; /* Контент ниже .nav, но выше фона */
+}
+
+/* Если нужен легкий blur без "мутности" всего сайта */
+.nav.blur-enabled {
+    -webkit-backdrop-filter: blur(4px); /* Меньший blur для мягкости */
+    backdrop-filter: blur(4px);
+    background: rgba(10, 10, 10, 0.85); /* Чуть прозрачнее */
 }
 
 .nav-text:hover {
@@ -105,7 +146,7 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     border-radius: 12px;
     border: 1px solid var(--border-color);
-    z-index: 1100;
+    z-index: 50;
     overflow: hidden;
     backdrop-filter: none;
 }
@@ -547,4 +588,89 @@
 .swiper-button-next::after {
     font-size: 18px;
     font-weight: 700;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(10,10,10,1); /* полностью непрозрачный */
+}
+
+.logo img {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.05);
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px 20px;
+  background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(8px); /* можешь убрать, если мутит фон */
+}
+
+.nav-text {
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-text:hover {
+    color: var(--primary-color);
+    background: rgba(25, 230, 154, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-text.f-success {
+    color: var(--primary-color);
+    background: rgba(25, 230, 154, 0.15);
+}
+
+.nav-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-text.f-success::after {
+    width: 80%;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: var(--background-light);
+    min-width: 120px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    backdrop-filter: none;
 }
