@@ -5,17 +5,14 @@
     --background-dark: #0A0A0A;
 }
 
-/* Header Styles */
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: -10; /* Оставляем как есть */
-    background: rgba(10, 10, 10, 1);
-    height: 60px; /* Фиксированная высота */
+    background: rgba(10,10,10,1);
+    z-index: -10 ; /* вместо -10 */
 }
-
 .logo img {
     transition: transform 0.3s ease;
 }
@@ -24,22 +21,47 @@
     transform: scale(1.05);
 }
 
+.header,
+.nav,
+.menu__body {
+    box-shadow: none !important;
+}
+
 /* Navigation */
 /* Navigation */
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+.nav,
+.menu__body {
     position: fixed;
-    top: 0; /* Или top: 60px, если .header используется */
+    top: 0;
     left: 0;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* можешь space-between оставить */
+    gap: 20px;
     padding: 12px 20px;
-    background: rgba(10, 10, 10, 0.95);
-    -webkit-backdrop-filter: blur(4px); /* Снижаем blur для мягкости */
-    backdrop-filter: blur(4px); /* Ограничиваем эффект */
-    z-index: 100; /* Понижаем, чтобы не перекрывать всё */
+    background: rgba(10,10,10,0.95);  /* почти чёрный с прозрачностью */
+    backdrop-filter: blur(8px);
+    z-index: 1100; /* поверх всего */
+}
+
+.header,
+.nav,
+.menu__body {
+    box-shadow: none !important;
+}
+
+.menu__list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.welcome--text,
+.statistic__frame,
+.problems__container {
+    position: relative;
+    z-index: 1; /* максимум */
 }
 
 /* Основной контейнер контента */
