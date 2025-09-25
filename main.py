@@ -67,3 +67,30 @@ async def index(request: Request):
     }
     return templates.TemplateResponse("index.html", context)
 
+
+# main.py - добавьте этот route
+@app.get("/{lang}")
+async def index_with_lang(lang: str, request: Request):
+    if lang not in SUPPORTED_LANGUAGES:
+        # Если язык не поддерживается - редирект на главную с определением языка
+        return RedirectResponse("/")
+
+    # Устанавливаем cookie с выбранным языком
+    tr = get_translation(lang)
+    _ = tr.gettext
+
+    context = {
+        "request": request,
+        "_": _,
+        "LANG": lang,
+    }
+
+    response = templates.TemplateResponse("index.html", context)
+    response.set_cookie(key="lang", value=lang, max_age=60 * 60 * 24 * 365)
+    return response
+
+@app.get("/test-lang")
+async def test_lang(request: Request):
+    lang = request.cookies.get("lang", "ru")
+    tr = get_translation(lang)
+    return {"language": lang, "translation_test": tr.gettext("MAIN")}

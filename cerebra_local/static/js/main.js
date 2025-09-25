@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSwiper();
     initializeMap();
     initializeAnimations();
+    initializeLazyLoading();
 });
 
 // Navigation functionality
@@ -44,34 +45,63 @@ function initializeNavigation() {
     }
 }
 
+// Language functionality
+function pickLanguage(name, code, imgUrl) {
+    console.log('Switching to language:', name, code, imgUrl);
+
+    // Update display immediately
+    document.getElementById("currentLanName").textContent = name;
+    document.getElementById("currentLanImg").src = imgUrl;
+
+    // Set cookie and reload
+    document.cookie = `lang=${code};path=/;max-age=${60*60*24*365}`;
+    console.log('Cookie set, reloading page...');
+
+    window.location.reload();
+}
+
+window.updateLanguageImages = function(language) {
+    const imageMap = {
+        'ENG': 'en',
+        'РУС': 'ru',
+        'KGZ': 'ky'
+    };
+
+    const langCode = imageMap[language];
+    if (!langCode) return;
+
+    const genderImages = {
+        web: document.querySelectorAll(`[class*="gender-web-img"]`),
+        mobile: document.querySelectorAll(`[class*="gender-img"]`)
+    };
+
+    Object.values(genderImages).forEach(group => {
+        group.forEach(img => img.style.display = "none");
+    });
+
+    const activeImages = document.querySelectorAll(`[class*="gender-web-img-${langCode}"], [class*="gender-img-${langCode}"]`);
+    activeImages.forEach(img => img.style.display = "block");
+
+    const langItems = document.querySelectorAll(".lang__item");
+    langItems.forEach(item => item.classList.remove("active"));
+
+    const activeLangItem = document.querySelector(`.lang-${langCode}`);
+    if (activeLangItem) activeLangItem.classList.add("active");
+}
+
 // Language dropdown functionality
 function initializeLanguageDropdown() {
-    window.myFunction = function() {
+    window.toggleDropdown = function() {
         const dropdown = document.getElementById("myDropdown");
         dropdown.classList.toggle("show");
     };
 
-    window.pickLanguage = function(text, src) {
-        const currentLangImg = document.getElementById("currentLanImg");
-        const currentLangName = document.getElementById("currentLanName");
-
-        if (currentLangImg && currentLangName) {
-            currentLangImg.src = src;
-            currentLangName.textContent = text;
-        }
-
-        const dropdown = document.getElementById("myDropdown");
-        dropdown.classList.remove("show");
-
-        // Update language-specific images
-        updateLanguageImages(text);
-    };
-
     // Close dropdown when clicking outside
     window.addEventListener('click', function(event) {
-        if (!event.target.matches('.currentLanName') &&
-            !event.target.matches('.currentLanImg') &&
-            !event.target.matches('.dropbtn')) {
+        if (!event.target.matches('.dropbtn') &&
+            !event.target.matches('.dropbtn *') &&
+            !event.target.closest('.dropbtn')) {
+
             const dropdowns = document.getElementsByClassName("dropdown-content");
             Array.from(dropdowns).forEach(dropdown => {
                 if (dropdown.classList.contains('show')) {
@@ -272,47 +302,6 @@ function initializeMap() {
     }
 }
 
-// Language-specific image updates
-function updateLanguageImages(language) {
-    const imageMap = {
-        'ENG': 'en',
-        'РУС': 'ru',
-        'Kgz': 'kg'
-    };
-
-    const langCode = imageMap[language];
-    if (!langCode) return;
-
-    // Update gender statistics images
-    const genderImages = {
-        web: document.querySelectorAll('[class*="gender-web-img"]'),
-        mobile: document.querySelectorAll('[class*="gender-img"]')
-    };
-
-    Object.values(genderImages).forEach(imageGroup => {
-        imageGroup.forEach(img => {
-            img.style.display = 'none';
-        });
-    });
-
-    // Show appropriate language images
-    const activeImages = document.querySelectorAll(`[class*="gender-web-img-${langCode}"], [class*="gender-img-${langCode}"]`);
-    activeImages.forEach(img => {
-        img.style.display = 'block';
-    });
-
-    // Update language item active states
-    const langItems = document.querySelectorAll('.lang__item');
-    langItems.forEach(item => {
-        item.classList.remove('active');
-    });
-
-    const activeLangItem = document.querySelector(`.lang-${langCode.toLowerCase()}`);
-    if (activeLangItem) {
-        activeLangItem.classList.add('active');
-    }
-}
-
 // Additional animations and effects
 function initializeAnimations() {
     // Parallax effect for hero section
@@ -429,5 +418,3 @@ if ('serviceWorker' in navigator) {
             });
     });
 }
-
-

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/components.css">
     <link rel="stylesheet" href="/static/css/responsive.css">
-    <link rel="icon" type="image/x-icon" href="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=32&h=32&fit=crop">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -19,30 +18,13 @@
     <div class="main-container">
         <!-- Header -->
             <div class="sticky-top row mx-0 py-3 bg-main px-5 justify-content-between d-none d-flex header">            <div class="logo">
-                <img class="ml-0" width="194px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=194&h=60&fit=crop" alt="CEREBRA Logo">
             </div>
 
             <!-- Mobile Menu -->
             <div class="header__menu menu-burger">
                 <button type="button" class="menu__icon icon-menu"><span class="butt"></span></button>
                 <div class="menu__wrapper">
-                    <div class="lang__body">
-                        <div class="lang__item lang-kz" onclick="pickLanguage('ҚАЗ', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
-                            <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'kz'">
-                                <img style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> ҚАЗ
-                            </a>
-                        </div>
-                        <div class="lang__item lang-eng" onclick="pickLanguage('ENG', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
-                            <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'en'">
-                                <img style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> ENG
-                            </a>
-                        </div>
-                        <div class="lang__item lang-ru" onclick="pickLanguage('РУС', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
-                            <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'ru'">
-                                <img style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> РУС
-                            </a>
-                        </div>
-                    </div>
+
                     <nav class="menu__body">
                         <ul class="menu__list">
                             <li class="menu__item">
@@ -109,31 +91,28 @@
                     <div onclick="goTo('company')" class="mx-2 align-self-center nav-text nav-company nav-desktop">{{ _('COMPANY') }}</div>
                     <div onclick="goTo('charitable-foundation')" class="mx-2 align-self-center nav-text nav-charitable-foundation nav-desktop">{{ _('CHARITY FOUNDATION') }}</div>
                     <div onclick="goTo('contacts')" class="mx-2 align-self-center nav-text nav-contacts nav-desktop">{{ _('CONTACTS') }}</div>
-                </div>
-                <div class="dropdown ml-3 lang">
-                    <button id="dropbtn" onclick="myFunction()" class="dropbtn">
-                        <img class="currentLanImg" id="currentLanImg" style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt="">
-                        <span class="currentLanName" id="currentLanName">ENG</span>
-                    </button>
-                    <div id="myDropdown" class="dropdown-content">
-                        <div onclick="pickLanguage('РУС', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
-                            <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'ru'">
-                                <img style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> РУС
-                            </a>
-                        </div>
-                        <div onclick="pickLanguage('ҚАЗ', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
-                            <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'kz'">
-                                <img style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> ҚАЗ
-                            </a>
-                        </div>
-                        <div onclick="pickLanguage('ENG', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
-                            <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'en'">
-                                <img style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> ENG
-                            </a>
+
+                    <div class="dropdown lang">
+                            <button id="dropbtn" onclick="toggleDropdown()" class="dropbtn">
+                                <img id="currentLanImg" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt="">
+                                <span id="currentLanName">ENG</span>
+                            </button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <div onclick="pickLanguage('РУС', 'ru', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
+                                    <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> РУС
+                                </div>
+                                <div onclick="pickLanguage('KGZ', 'ky', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
+                                    <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> KGZ
+                                </div>
+                                <div onclick="pickLanguage('ENG', 'en', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
+                                    <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> ENG
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
+
         </div>
 
         <!-- Welcome Section -->
@@ -146,9 +125,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col px-0 row mx-0 justify-content-end welcome--img">
-                <img width="100%" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Medical Technology">
-            </div>
+
         </div>
 
         <!-- Main Section -->
@@ -183,6 +160,9 @@
                 </div>
             </div>
         </div>
+
+
+
 
         <!-- Statistics Section -->
         <div class="py-5 fs-l" id="statistic">
