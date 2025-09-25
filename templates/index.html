@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CEREBRA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/components.css">
+    <link rel="stylesheet" href="/static/css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=32&h=32&fit=crop">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body class="bg-main">
+    <div class="main-container">
+        <!-- Header -->
+            <div class="sticky-top row mx-0 py-3 bg-main px-5 justify-content-between d-none d-flex header">            <div class="logo">
+                <img class="ml-0" width="194px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=194&h=60&fit=crop" alt="CEREBRA Logo">
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="header__menu menu-burger">
+                <button type="button" class="menu__icon icon-menu"><span class="butt"></span></button>
+                <div class="menu__wrapper">
+                    <div class="lang__body">
+                        <div class="lang__item lang-kz" onclick="pickLanguage('ҚАЗ', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
+                            <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'kz'">
+                                <img style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> ҚАЗ
+                            </a>
+                        </div>
+                        <div class="lang__item lang-eng" onclick="pickLanguage('ENG', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
+                            <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'en'">
+                                <img style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> ENG
+                            </a>
+                        </div>
+                        <div class="lang__item lang-ru" onclick="pickLanguage('РУС', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
+                            <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'ru'">
+                                <img style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> РУС
+                            </a>
+                        </div>
+                    </div>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a onclick="goTo('main')" class="align-self-center mx-2 nav-text f-success nav-main menu__link">MAIN</a>
+                            </li>
+                            <li class="menu__item">
+                                <a onclick="goTo('problems')" class="mx-2 align-self-center nav-text nav-problems menu__link">PROBLEM</a>
+                            </li>
+                            <li class="menu__item">
+                                <a onclick="goTo('ai')" class="mx-2 align-self-center nav-text nav-ai menu__link">AI SOLUTION</a>
+                            </li>
+                            <li class="menu__item">
+                                <a onclick="goTo('company')" class="mx-2 align-self-center nav-text nav-company menu__link">COMPANY</a>
+                            </li>
+                            <li class="menu__item">
+                                <a onclick="goTo('charitable-foundation')" class="mx-2 align-self-center nav-text nav-charitable-foundation menu__link">CHARITY FOUNDATION</a>
+                            </li>
+                            <li class="menu__item">
+                                <a onclick="goTo('contacts')" class="mx-2 align-self-center nav-text nav-contacts menu__link">CONTACTS</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="social">
+                        <div class="footer__icons">
+                            <a target="_blank" href="https://www.facebook.com/cerebra.kz" class="footer-icon">
+                                <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.929 17.677">
+                                    <path d="M76.988,9.415h1.938v7.977a.285.285,0,0,0,.285.285H82.5a.285.285,0,0,0,.285-.285V9.452h2.228a.285.285,0,0,0,.283-.253l.338-2.937a.285.285,0,0,0-.283-.318H82.782V4.1c0-.555.3-.836.888-.836h1.678a.285.285,0,0,0,.285-.285V.287A.285.285,0,0,0,85.347,0H83.035c-.016,0-.053,0-.106,0a4.43,4.43,0,0,0-2.9,1.092,3.038,3.038,0,0,0-1.01,2.7V5.945H76.988a.285.285,0,0,0-.285.285v2.9A.285.285,0,0,0,76.988,9.415Z" transform="translate(-76.703)" fill="#fff"/>
+                                </svg>
+                            </a>
+                            <a target="_blank" href="https://www.linkedin.com/company/cerebrai/about/" class="footer-icon">
+                                <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.677 17.678">
+                                    <path d="M19.909,19.672h0V13.189c0-3.172-.683-5.615-4.391-5.615a3.849,3.849,0,0,0-3.467,1.905H12V7.87H8.489v11.8H12.15V13.828c0-1.539.292-3.026,2.2-3.026,1.877,0,1.905,1.756,1.905,3.125v5.746Z" transform="translate(-2.236 -1.995)" fill="#fff"/>
+                                    <path d="M.4,7.977H4.061v11.8H.4Z" transform="translate(-0.104 -2.102)" fill="#fff"/>
+                                    <path d="M2.123,0A2.133,2.133,0,1,0,4.245,2.123,2.123,2.123,0,0,0,2.123,0Z" fill="#fff"/>
+                                </svg>
+                            </a>
+                            <a target="_blank" href="https://vm.tiktok.com/ZSeScyQpM" class="footer-icon">
+                                <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.531 17.678">
+                                    <path d="M46.945,4.816a4.454,4.454,0,0,1-2.691-.9A4.455,4.455,0,0,1,42.475.39H39.588V8.277l0,4.32a2.617,2.617,0,1,1-1.795-2.479V7.187a5.68,5.68,0,0,0-.832-.062A5.535,5.535,0,0,0,32.8,8.986a5.424,5.424,0,0,0,.245,7.479,5.631,5.631,0,0,0,.521.455,5.535,5.535,0,0,0,3.393,1.147,5.68,5.68,0,0,0,.832-.061,5.516,5.516,0,0,0,3.082-1.541,5.4,5.4,0,0,0,1.621-3.845l-.015-6.451a7.314,7.314,0,0,0,4.475,1.521V4.815h-.008Z" transform="translate(-31.423 -0.39)" fill="#fff"/>
+                                </svg>
+                            </a>
+                            <a target="_blank" href="https://www.instagram.com/cerebra.kz/" class="footer-icon">
+                                <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.784 14.784">
+                                    <path d="M0,3.072v8.641a3.072,3.072,0,0,0,3.072,3.072h8.641a3.072,3.072,0,0,0,3.072-3.072V3.072A3.072,3.072,0,0,0,11.712,0H3.072A3.072,3.072,0,0,0,0,3.072Zm8.958,8.509A4.484,4.484,0,0,1,3.2,5.826,4.242,4.242,0,0,1,5.826,3.2a4.484,4.484,0,0,1,5.755,5.755A4.241,4.241,0,0,1,8.958,11.581Zm3.564-8.659a.578.578,0,0,1-1.013.274.351.351,0,0,1-.03-.04.579.579,0,0,1-.023-.614.574.574,0,0,1,.784-.21.579.579,0,0,1,.287.543A.356.356,0,0,1,12.522,2.922Zm0,0" fill="#fff"/>
+                                    <path d="M168.115,164.523a3.592,3.592,0,1,0,3.592,3.592A3.6,3.6,0,0,0,168.115,164.523Zm0,0" transform="translate(-160.723 -160.723)" fill="#fff"/>
+                                </svg>
+                            </a>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCEt_JWUA6xKSX6aUnCVcSsA" class="footer-icon">
+                                <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.624 13.04">
+                                    <path d="M18.241-4.042A2.333,2.333,0,0,0,16.6-5.683a54.514,54.514,0,0,0-7.287-.4A56.638,56.638,0,0,0,2.025-5.7,2.381,2.381,0,0,0,.384-4.042,24.586,24.586,0,0,0,0,.438a24.5,24.5,0,0,0,.384,4.48A2.334,2.334,0,0,0,2.025,6.559a54.613,54.613,0,0,0,7.287.4A56.638,56.638,0,0,0,16.6,6.574a2.333,2.333,0,0,0,1.642-1.641,24.593,24.593,0,0,0,.383-4.48A23.338,23.338,0,0,0,18.241-4.042ZM7.456,3.23V-2.354L12.3.438Zm0,0" transform="translate(0 6.082)" fill="#fff"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="col px-0 row mx-0 justify-content-end menu">
+                <div class="nav">
+                    <div onclick="goTo('main')" class="align-self-center mx-2 nav-text f-success nav-main nav-desktop">MAIN</div>
+                    <div onclick="goTo('problems')" class="mx-2 align-self-center nav-text nav-problems nav-desktop">PROBLEM</div>
+                    <div onclick="goTo('ai')" class="mx-2 align-self-center nav-text nav-ai nav-desktop">AI SOLUTION</div>
+                    <div onclick="goTo('company')" class="mx-2 align-self-center nav-text nav-company nav-desktop">COMPANY</div>
+                    <div onclick="goTo('charitable-foundation')" class="mx-2 align-self-center nav-text nav-charitable-foundation nav-desktop">CHARITY FOUNDATION</div>
+                    <div onclick="goTo('contacts')" class="mx-2 align-self-center nav-text nav-contacts nav-desktop">CONTACTS</div>
+                </div>
+                <div class="dropdown ml-3 lang">
+                    <button id="dropbtn" onclick="myFunction()" class="dropbtn">
+                        <img class="currentLanImg" id="currentLanImg" style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt="">
+                        <span class="currentLanName" id="currentLanName">ENG</span>
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                        <div onclick="pickLanguage('РУС', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
+                            <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'ru'">
+                                <img style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> РУС
+                            </a>
+                        </div>
+                        <div onclick="pickLanguage('ҚАЗ', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
+                            <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'kz'">
+                                <img style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> ҚАЗ
+                            </a>
+                        </div>
+                        <div onclick="pickLanguage('ENG', 'https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop')">
+                            <a href="#" data-request="onSwitchLocale" data-request-data="locale: 'en'">
+                                <img style="margin-top: -2px;" width="15px" height="auto" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=15&h=15&fit=crop" alt=""> ENG
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Welcome Section -->
+        <div class="row mx-0 px-5 flex-column-reverse flex-lg-row scroll-item" id="welcome">
+            <div class="col-auto px-0 welcome--text">
+                <div class="f-18 vertical-center fs-l">
+                    <div class="cerebra-logo">CEREBRA</div>
+                    <div class="ml-1 mt-4">
+                        <div>AI-powered software for early stroke detection for faster and more accurate treatment</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col px-0 row mx-0 justify-content-end welcome--img">
+                <img width="100%" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Medical Technology">
+            </div>
+        </div>
+
+        <!-- Main Section -->
+        <div id="main" class="scrolling py-5 my-5 bshadow fs-l">
+            <div class="text-center">
+                <div class="cerebra-logo-main">CEREBRA</div>
+            </div>
+            <div class="row mx-auto mt-5 flex-column flex-lg-row" style="width: 80%;">
+                <div class="col-12 col-lg d-flex justify-content-start justify-content-lg-center">
+                    <div class="mb-3 mb-lg-0">
+                        <span class="ts fs-n">01</span>
+                        <div style="width: 260px" class="mt-2">fast stroke diagnosis</div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg d-flex justify-content-start justify-content-lg-center">
+                    <div class="mb-3 mb-lg-0">
+                        <span class="ts fs-n">02</span>
+                        <div style="width: 200px" class="mt-2">minimisation of the human factor</div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg d-flex justify-content-start justify-content-lg-center">
+                    <div class="mb-3 mb-lg-0">
+                        <span class="ts fs-n">03</span>
+                        <div style="width: 220px" class="mt-2">internal ecosystem for patients' data exchange</div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg d-flex justify-content-start justify-content-lg-center">
+                    <div class="mb-3 mb-lg-0">
+                        <span class="ts fs-n">04</span>
+                        <div style="width: 220px" class="mt-2">any-time remote platform access</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div class="py-5 fs-l" id="statistic">
+            <div class="mx-auto mb-5 statistic__frame">
+                <iframe class="border br-main" width="100%" height="100%" src="https://www.youtube.com/embed/HcdqCsegmGA"></iframe>
+            </div>
+            <div class="text-center f-blue bold statistic__header">
+                <div class="l-s fs-b">STROKE STATISTICS IN KAZAKHSTAN</div>
+            </div>
+            <div class="row mx-0 justify-content-center statistic__container">
+                <div class="col px-0 py-4 text-center statistic__item"></div>
+                <div class="col px-0 py-4 f-success text-center border-left br-dark d-flex align-items-center statistic__item">
+                    <div class="mx-auto" style="width: 180px;">
+                        <div class="f-40 bold">№1</div>
+                        <div class="f-18">cause of death</div>
+                    </div>
+                </div>
+                <div class="col px-0 py-4 f-success text-center border-left br-dark d-flex align-items-center statistic__item">
+                    <div class="mx-auto" style="width: 180px;">
+                        <div class="f-18">Kazakhstan ranks</div>
+                        <div class="f-40 bold">TOP 30</div>
+                        <div class="f-18">in death statistics due to stroke</div>
+                    </div>
+                </div>
+                <div class="col px-0 py-4 f-success text-center border-left br-dark d-flex align-items-center statistic__item">
+                    <div class="mx-auto" style="width: 180px;">
+                        <div class="f-40 bold">80%</div>
+                        <div class="f-18">survivors have severe disabilities</div>
+                    </div>
+                </div>
+                <div class="col px-0 py-4 text-center border-left br-dark statistic__item"></div>
+            </div>
+
+            <div class="row mx-0 justify-content-center statistic__container_fff">
+                <div class="col px-0 py-4 text-center border-top br-dark d-flex align-items-center statistic__item">
+                    <div class="mx-auto" style="width: 150px;">
+                        <div class="f-40 bold">40</div>
+                        <div class="bold" style="margin-top: -10px; font-size: 15px;">THOUSAND</div>
+                        <div class="f-18 mt-2">stroke cases annually</div>
+                    </div>
+                </div>
+                <div class="col px-0 py-4 text-center border-top border-left br-dark d-flex align-items-center statistic__item">
+                    <div class="mx-auto" style="width: 206px;">
+                        <div class="f-40 bold">52%</div>
+                        <div class="f-18 mt-3">likelihood of death</div>
+                    </div>
+                </div>
+                <div class="col px-0 py-4 text-center border-top border-left br-dark d-flex align-items-center statistic__item">
+                    <div class="mx-auto" style="width: 180px;">
+                        <div class="f-40 bold">5</div>
+                        <div class="bold" style="margin-top: -10px; font-size: 15px;">THOUSAND</div>
+                        <div class="f-18 mt-2">die during the initial 10 days</div>
+                    </div>
+                </div>
+                <div class="col px-0 py-4 text-center border-top border-left br-dark d-flex align-items-center statistic__item">
+                    <div class="mx-auto" style="width: 180px;">
+                        <div class="f-40 bold">10</div>
+                        <div class="bold" style="margin-top: -10px; font-size: 15px;">THOUSAND</div>
+                        <div class="f-18 mt-2">die during the first month</div>
+                    </div>
+                </div>
+                <div class="col px-0 py-4 text-center border-top border-left br-dark d-flex align-items-center statistic__item">
+                    <div class="mx-auto" style="width: 220px;">
+                        <div class="f-40 bold">60</div>
+                        <div class="bold" style="margin-top: -10px; font-size: 15px;">THOUSAND</div>
+                        <div class="f-18 mt-2">Kazakhstanis are registered for stroke disability</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gender Statistics -->
+        <div class="p-0 p-lg-5 mt-0 mt-lg-5 fs-l statistic_gender">
+            <div class="row mx-0 flex-column-reverse flex-lg-row">
+                <div class="col f-18 d-flex justify-content-center">
+                    <div class="my-auto statistic_gender_container">
+                        <div style="width: 20px; height: 2px;" class="bg-green mb-3"></div>
+                        <div class="statistic_gender_item">
+                            Stroke is an abrupt interruption of constant blood flow to the brain that causes damage and death of neurons in the brain.
+                        </div>
+                        <div style="width: 20px; height: 2px;" class="bg-green mt-5 mb-3"></div>
+                        <div class="statistic_gender_item">
+                            Ischemic stroke is caused by a blockage in an artery that supplies blood to the brain. A hemorrhagic stroke happens when a blood vessel bursts, causing bleeding in the brain.
+                        </div>
+                        <div style="width: 20px; height: 2px;" class="bg-green mt-5 mb-3"></div>
+                        <div class="statistic_gender_item">
+                            Ischemic stroke occurs much more often (more than 80% of cases) than hemorrhagic stroke.
+                        </div>
+                    </div>
+                </div>
+                <div class="col text-right my-lg-auto statistic_gender__img d-none d-lg-block">
+                    <img class="gender-web-img" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Gender Statistics" class="h-auto mx-auto">
+                </div>
+                <div class="col-12 d-block d-lg-none mb-4">
+                    <img class="gender-img" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="Gender Statistics Mobile" class="h-auto mx-auto">
+                </div>
+            </div>
+        </div>
+
+        <!-- Problems Section -->
+        <div id="problems" class="scrolling py-5 text-center f-18 scroll-item">
+            <div style="font-size: 32px;">PROBLEM</div>
+            <div class="fs-l">
+                <div style="width: 20px; height: 2px;" class="bg-green my-3 mx-auto"></div>
+                <div class="mx-auto" style="max-width: 916px;">Besides the lack of highly qualified medical personnel, the main problem with stroke diagnosis lies in the inability of a human eye to detect cytotoxic edema on a CT (computed tomography) scan.</div>
+            </div>
+        </div>
+
+        <div class="py-5">
+            <div class="row mx-0 justify-content-center problems__container">
+                <div class="col mx-3 d-flex justify-content-center bshadow text-center br-rad-2 py-5 problems__item">
+                    <div class="mt-5">
+                        <div style="height: 130px;">
+                            <div class="problem-icon">👨‍⚕️</div>
+                        </div>
+                        <div style="height: 61px;" class="my-4 fs-m">QUALIFICATION GAP</div>
+                        <div class="f-18 fs-l px-4">Shortage of medical staff and a large gap in doctors' qualifications</div>
+                    </div>
+                </div>
+                <div class="col mx-3 d-flex justify-content-center bshadow text-center br-rad-2 py-5 problems__item">
+                    <div class="mt-5">
+                        <div style="height: 130px;">
+                            <div class="problem-icon">⚕️</div>
+                        </div>
+                        <div style="height: 61px;" class="my-4 mx-auto fs-m">HIGH BURDEN ON DOCTORS</div>
+                        <div class="f-18 fs-l px-4">The overwhelmed medical staff especially during complex and conflicting cases</div>
+                    </div>
+                </div>
+                <div class="col mx-3 d-flex justify-content-center bshadow-green text-center py-5 f-success border br-green problems__item problem__item-green">
+                    <div class="mt-5">
+                        <div style="height: 130px;">
+                            <div class="problem-icon problem-icon-green">👁️</div>
+                        </div>
+                        <div style="height: 61px; width: 210px;" class="my-4 mx-auto fs-m">HUMAN EYE IS UNABLE TO DETECT EMERGING STROKE ON A CT SCAN</div>
+                        <div class="f-18 fs-l px-2">The human eye is unable to diagnose an emerging cytotoxic edema on a CT scan. Stroke diagnosis by a doctor is possible only after 6 hours from the symptoms' onset</div>
+                    </div>
+                </div>
+                <div class="col mx-3 d-flex justify-content-center bshadow text-center br-rad-2 py-5 problems__item">
+                    <div class="mt-5">
+                        <div style="height: 130px;">
+                            <div class="problem-icon">💻</div>
+                        </div>
+                        <div style="height: 61px;" class="my-4 fs-m">NO PLATFORMS</div>
+                        <div class="f-18 fs-l px-5">No platform for quick expertise opinion and experience exchange</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center f-18 fs-l">
+            <div>Stroke's therapeutic window</div>
+            <div>is the initial 4.5 hours after the onset of symptoms.</div>
+        </div>
+
+        <!-- AI Solution Section -->
+        <div id="ai" class="scrolling py-5 mx-auto mt-5 scroll-item" style="width: 80%;">
+            <div class="f-32 mb-4">SOLUTION</div>
+            <div class="f-20 fs-l">
+                AI that identifies brain stroke within 10 minutes helping to prevent neurologic deficit and brain cells death -
+                <span class="greenText">CEREBRA</span>
+            </div>
+            <div class="fs-l mt-1">
+                <div class="mt-5 f-28">As a result:</div>
+                <div class="mt-3 f-18">
+                    <svg class="mb-1 footer-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                        <circle cx="5" cy="5" r="5" fill="#19e69a"/>
+                    </svg>
+                    Patient receives immediate treatment
+                </div>
+                <div class="mt-1 f-18">
+                    <svg class="mb-1 footer-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                        <circle cx="5" cy="5" r="5" fill="#19e69a"/>
+                    </svg>
+                    Risks of function loss and neurologic deficit are minimised
+                </div>
+            </div>
+        </div>
+
+        <!-- Standard Process -->
+        <div class="p-1 ps-sm-5 standart-process">
+            <div class="f-28 ml-0 ml-lg-5 text-center text-lg-left">STANDARD PROCEDURE</div>
+            <div class="text-center d-none d-lg-block">
+                <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop" alt="Standard Process" class="standart-web-img h-auto mx-auto" style="width:95%;">
+            </div>
+            <div class="d-block d-lg-none mt-5">
+                <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" alt="Standard Process Mobile" class="h-auto mx-auto standart-img">
+            </div>
+        </div>
+
+        <!-- With CEREBRA Section -->
+        <div class="py-5 bshadow-lg-green">
+            <div class="main-container">
+                <div class="f-27 pl-0 ml-0 f-success mx-auto w-95">
+                    WITH <span class="greenText">CEREBRA</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-container">
+            <div class="text-center px-5 mt-5 d-none d-lg-block">
+                <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=1200&h=400&fit=crop" alt="Process with CEREBRA" class="h-auto mx-auto process-web-img" style="width: 95%;">
+            </div>
+            <div class="d-block d-lg-none py-5">
+                <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" alt="Process with CEREBRA Mobile" class="w-75 h-auto mx-auto process-img">
+            </div>
+
+            <!-- Product Section -->
+            <div class="p-0 my-0 p-lg-5 my-lg-5 product-section">
+                <div class="row mx-0 product__column">
+                    <div class="col-12 col-lg-7 my-auto text-center product__item">
+                        <img style="margin: -15% -15% -10% -15%; max-width: 100%;" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Product">
+                    </div>
+                    <div class="f-32 mb-4 product__title">PRODUCT</div>
+                    <div class="col my-auto mr-5 d-flex justify-content-end product__item content">
+                        <div class="text-lg-right f-18 text-left">
+                            <div class="fs-l">
+                                <div style="width: 20px; height: 2px;" class="bg-green mb-2 mr-auto ml-lg-auto mr-lg-0"></div>
+                                <div style="max-width: 580px;">software is available as a web platform and a smartphone application for iOS and Android</div>
+                                <div style="width: 20px; height: 2px;" class="bg-green mt-3 mb-2 mr-auto ml-lg-auto mr-lg-0"></div>
+                                <div style="max-width: 600px;">analysis of brain damage according to the ASPECTS scale</div>
+                                <div style="width: 20px; height: 2px;" class="bg-green mt-3 mb-2 mr-auto ml-lg-auto mr-lg-0"></div>
+                                <div style="max-width: 600px;">automation of medical guidelines</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company Section -->
+            <div id="company" class="scrolling py-5 bshadow scroll-item">
+                <div class="f-32 mb-4 d-lg-none col">COMPANY</div>
+                <div class="row mx-0 pl-0 pl-lg-5 flex-column-reverse flex-lg-row">
+                    <div class="col my-auto d-flex justify-content-center">
+                        <div class="f-18">
+                            <div class="f-32 mb-4 d-none d-lg-block">COMPANY</div>
+                            <div class="fs-l">
+                                The project <span class="greenText">CEREBRA</span> was developed by Almaty A.I. Lab, which has been developing artificial intelligence technologies since 2018.
+                                <div class="mt-5 f-18">
+                                    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                                        <circle cx="5" cy="5" r="5" fill="#19e69a"/>
+                                    </svg>
+                                    member of Astana Hub (the biggest international IT and startup hub in Central Asia)
+                                </div>
+                                <div class="mt-1 f-18">
+                                    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                                        <circle cx="5" cy="5" r="5" fill="#19e69a"/>
+                                    </svg>
+                                    member of AIFC (Astana International Financial Centre)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-center my-auto">
+                        <img style="max-width: 100%;" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=400&h=200&fit=crop" alt="AI Lab">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charity Foundation Section -->
+        <div class="large-container">
+            <div id="charitable-foundation" class="scrolling py-5 bshadow scroll-item">
+                <div class="mb-4 col d-lg-none charitable_foundation_header">
+                    CHARITY FOUNDATION
+                </div>
+                <div class="row mx-0 flex-column-reverse flex-lg-row pl-0 pl-lg-5">
+                    <div class="col my-auto">
+                        <div class="f-18">
+                            <div class="f-32 mb-4 d-none d-lg-block">CHARITY FOUNDATION</div>
+                            <div class="fs-l">
+                                <span class="greenText">NeuroDamu</span> is a public charity foundation dedicated to the fight against stroke. The Foundation was opened on October 29, 2021, as part of International Stroke Day
+                                <div class="mt-5">The Foundation is committed to develop a comprehensive solution to the problems surrounding the diagnosis and treatment of stroke.</div>
+                                <div class="mt-5">The objectives of the foundation are:</div>
+                                <div class="mt-5 f-18">
+                                    <svg class="footer-icon" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                                        <circle cx="5" cy="5" r="5" fill="#19e69a"/>
+                                    </svg>
+                                    Supporting innovative technologies that help in the fight against stroke;
+                                </div>
+                                <div class="mt-1 f-18 d-flex">
+                                    <div class="footer-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                                            <circle cx="5" cy="5" r="5" fill="#19e69a"/>
+                                        </svg>
+                                    </div>
+                                    <div class="pl-1">Working with the public to raise awareness about risk factors, methods of prevention and self-diagnosis of stroke;</div>
+                                </div>
+                                <div class="mt-1 f-18 d-flex">
+                                    <div class="footer-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                                            <circle cx="5" cy="5" r="5" fill="#19e69a"/>
+                                        </svg>
+                                    </div>
+                                    <div class="pl-1">Supporting medical students, medical residents, postgraduate students and medical researchers to help in the fight against stroke.</div>
+                                </div>
+                                <div class="mt-5 f-18">
+                                    The Foundation is a completely non-profit organization supported by voluntary contributions.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col text-center my-auto py-5 py-lg-0">
+                        <img style="max-width: 100%;" src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop" alt="NeuroDamu Foundation">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Media Section -->
+        <div class="main-container">
+            <div class="py-5 bshadow">
+                <div class="mx-auto" style="width: 85%;">
+                    <div class="f-32 my-5 pt-5">MEDIA</div>
+                    <div class="fs-l f-18">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-content">
+                                        <div class="swiper-image">
+                                            <a target="_blank" href="https://forbes.kz/process/technologies/za_chto_meditsinskiy_startap_cerebra_poluchil_1_mln_ot_timura_turlova">
+                                                <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" alt="Forbes Article">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-text">
+                                            <a target="_blank" href="https://forbes.kz/process/technologies/za_chto_meditsinskiy_startap_cerebra_poluchil_1_mln_ot_timura_turlova">
+                                                Why did the medical startup Cerebra receive $1 million from Timur Turlov
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-image">
+                                        <a target="_blank" href="https://do-business.kz/story/mediczina-budushhego-s-cerebra">
+                                            <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" alt="Business Article">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-text">
+                                        <a target="_blank" href="https://do-business.kz/story/mediczina-budushhego-s-cerebra">
+                                            Medicine of the future with CEREBRA
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-image">
+                                        <a target="_blank" href="https://forbes.kz//process/businessmen/derjat_udar_1628044618/?fbclid=IwAR3Xq5caWVFCTzBlb6rEts7yzMCl3fAv0C1RJgV-5llccYinqSTjT2gr8qM">
+                                            <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=300&h=200&fit=crop" alt="Forbes Startup Article">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-text">
+                                        <a target="_blank" href="https://forbes.kz//process/businessmen/derjat_udar_1628044618/?fbclid=IwAR3Xq5caWVFCTzBlb6rEts7yzMCl3fAv0C1RJgV-5llccYinqSTjT2gr8qM">
+                                            How does the Kazakh startup use artificial intelligence for early diagnosis of stroke
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                            <div class="swiper-button-prev btn-prev"></div>
+                            <div class="swiper-button-next btn-next"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Awards Section -->
+        <div class="py-5">
+            <div class="mx-auto" style="width: 85%;">
+                <div class="f-32 mb-5">AWARDS</div>
+                <div class="fs-l f-18">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper-content">
+                                    <div class="swiper-image">
+                                        <a href="https://emergeconf.io/blog/5-finalists-emerge-challenge-2021">
+                                            <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=250&h=200&fit=crop" alt="Emerge Challenge">
+                                        </a>
+                                    </div>
+                                    <div class="swiper-text">
+                                        <a href="https://emergeconf.io/blog/5-finalists-emerge-challenge-2021">
+                                            <p>Финалисты EMERGE Challenge 2021</p>
+                                            <p>ТОП-5 из 700 стартапов</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image">
+                                    <a href="https://astanatimes.com/2020/12/astana-hub-introduces-ten-best-kazakh-it-startups-of-2020">
+                                        <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=250&h=200&fit=crop" alt="Astana Hub Award">
+                                    </a>
+                                </div>
+                                <div class="swiper-text">
+                                    <a href="https://astanatimes.com/2020/12/astana-hub-introduces-ten-best-kazakh-it-startups-of-2020">
+                                        <p>TOP 10 best startups of 2020 by Astana Hub</p>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper-image">
+                                    <a href="https://www.questventures.com/businesses/accelerate/kazakhstan-digital-accelerator">
+                                        <img src="https://images.pexels.com/photos/3825539/pexels-photo-3825539.jpeg?auto=compress&cs=tinysrgb&w=250&h=200&fit=crop" alt="Kazakhstan Digital Accelerator">
+                                    </a>
+                                </div>
+                                <div class="swiper-text">
+                                    <a href="https://www.questventures.com/businesses/accelerate/kazakhstan-digital-accelerator">
+                                        <p>Finalists of Kazakhstan Digital Accelerator</p>
+                                        <p>Venture capital investment of $ 50 000</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev btn-prev"></div>
+                        <div class="swiper-button-next btn-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contacts Section -->
+        <div id="contacts" class="py-5 bshadow scrolling scroll-item">
+            <div class="mx-auto footer">
+                <div class="f-32 mb-5">CONTACTS</div>
+                <div class="row justify-content-between mx-0 f-18 flex-wrap flex-lg-nowrap">
+                    <div class="pl-0 col-12 col-lg-3">
+                        <div class="f-success">CEREBRA.AI LTD</div>
+                        <div class="f-12 fs-l mt-3">© 2025 CEREBRA.AI LTD</div>
+                    </div>
+                    <div class="col-12 col-lg-3 pl-0 pl-lg-3 mb-3 mb-lg-0">
+                        <div class="f-success bold f-14 l-s-2">E-MAIL</div>
+                        <div class="mt-3">info@cerebra.kz</div>
+                        <div class="f-success bold f-14 l-s-2 mt-4 mb-2">SOCIAL NETWORKS</div>
+                        <div class="footer__icons">
+                            <a target="_blank" href="https://www.facebook.com/cerebra.kz" class="footer-icon">
+                                <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.929 17.677">
+                                    <path d="M76.988,9.415h1.938v7.977a.285.285,0,0,0,.285.285H82.5a.285.285,0,0,0,.285-.285V9.452h2.228a.285.285,0,0,0,.283-.253l.338-2.937a.285.285,0,0,0-.283-.318H82.782V4.1c0-.555.3-.836.888-.836h1.678a.285.285,0,0,0,.285-.285V.287A.285.285,0,0,0,85.347,0H83.035c-.016,0-.053,0-.106,0a4.43,4.43,0,0,0-2.9,1.092,3.038,3.038,0,0,0-1.01,2.7V5.945H76.988a.285.285,0,0,0-.285.285v2.9A.285.285,0,0,0,76.988,9.415Z" transform="translate(-76.703)" fill="#fff"/>
+                                </svg>
+                            </a>
+                            <a target="_blank" href="https://www.linkedin.com/company/cerebrai/about/" class="footer-icon">
+                                <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.677 17.678">
+                                    <path d="M19.909,19.672h0V13.189c0-3.172-.683-5.615-4.391-5.615a3.849,3.849,0,0,0-3.467,1.905H12V7.87H8.489v11.8H12.15V13.828c0-1.539.292-3.026,2.2-3.026,1.877,0,1.905,1.756,1.905,3.125v5.746Z" transform="translate(-2.236 -1.995)" fill="#fff"/>
+                                    <path d="M.4,7.977H4.061v11.8H.4Z" transform="translate(-0.104 -2.102)" fill="#fff"/>
+                                    <path d="M2.123,0A2.133,2.133,0,1,0,4.245,2.123,2.123,2.123,0,0,0,2.123,0Z" fill="#fff"/>
+                                </svg>
+                            </a>
+                            <a target="_blank" href="https://vm.tiktok.com/ZSeScyQpM" class="footer-icon">
+                                <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.531 17.678">
+                                    <path d="M46.945,4.816a4.454,4.454,0,0,1-2.691-.9A4.455,4.455,0,0,1,42.475.39H39.588V8.277l0,4.32a2.617,2.617,0,1,1-1.795-2.479V7.187a5.68,5.68,0,0,0-.832-.062A5.535,5.535,0,0,0,32.8,8.986a5.424,5.424,0,0,0,.245,7.479,5.631,5.631,0,0,0,.521.455,5.535,5.535,0,0,0,3.393,1.147,5.68,5.68,0,0,0,.832-.061,5.516,5.516,0,0,0,3.082-1.541,5.4,5.4,0,0,0,1.621-3.845l-.015-6.451a7.314,7.314,0,0,0,4.475,1.521V4.815h-.008Z" transform="translate(-31.423 -0.39)" fill="#fff"/>
+                                </svg>
+                            </a>
+                            <a target="_blank" href="https://www.instagram.com/cerebra.kz/" class="footer-icon">
+                                <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.784 14.784">
+                                    <path d="M0,3.072v8.641a3.072,3.072,0,0,0,3.072,3.072h8.641a3.072,3.072,0,0,0,3.072-3.072V3.072A3.072,3.072,0,0,0,11.712,0H3.072A3.072,3.072,0,0,0,0,3.072Zm8.958,8.509A4.484,4.484,0,0,1,3.2,5.826,4.242,4.242,0,0,1,5.826,3.2a4.484,4.484,0,0,1,5.755,5.755A4.241,4.241,0,0,1,8.958,11.581Zm3.564-8.659a.578.578,0,0,1-1.013.274.351.351,0,0,1-.03-.04.579.579,0,0,1-.023-.614.574.574,0,0,1,.784-.21.579.579,0,0,1,.287.543A.356.356,0,0,1,12.522,2.922Zm0,0" fill="#fff"/>
+                                    <path d="M168.115,164.523a3.592,3.592,0,1,0,3.592,3.592A3.6,3.6,0,0,0,168.115,164.523Zm0,0" transform="translate(-160.723 -160.723)" fill="#fff"/>
+                                </svg>
+                            </a>
+                            <a target="_blank" href="https://www.youtube.com/channel/UCEt_JWUA6xKSX6aUnCVcSsA" class="footer-icon">
+                                <svg class="svg-hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.624 13.04">
+                                    <path d="M18.241-4.042A2.333,2.333,0,0,0,16.6-5.683a54.514,54.514,0,0,0-7.287-.4A56.638,56.638,0,0,0,2.025-5.7,2.381,2.381,0,0,0,.384-4.042,24.586,24.586,0,0,0,0,.438a24.5,24.5,0,0,0,.384,4.48A2.334,2.334,0,0,0,2.025,6.559a54.613,54.613,0,0,0,7.287.4A56.638,56.638,0,0,0,16.6,6.574a2.333,2.333,0,0,0,1.642-1.641,24.593,24.593,0,0,0,.383-4.48A23.338,23.338,0,0,0,18.241-4.042ZM7.456,3.23V-2.354L12.3.438Zm0,0" transform="translate(0 6.082)" fill="#fff"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-3 mb-4 mb-lg-0 pl-0 pl-lg-3">
+                        <div class="f-success bold f-14 l-s-2">OFFICE HOURS</div>
+                        <div class="mt-3">Mon-Fri 10:00-19:00</div>
+                        <div class="f-success bold f-14 l-s-2 mt-4">ADDRESS</div>
+                        <div class="mt-3">Republic of Kazakhstan</div>
+                        <div class="">Almaty city</div>
+                        <div class="">Dostyk Avenue 210A</div>
+                        <div class="">KOKTEM GRAND 5th floor, office 53</div>
+                    </div>
+                    <div class="pr-0 col-12 col-lg-3 mt-0 footer_map">
+                        <div class="text-right">
+                            <div id="map" style="width: 100%; height: 300px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
