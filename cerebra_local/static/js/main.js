@@ -277,7 +277,7 @@ function updateLanguageImages(language) {
     const imageMap = {
         'ENG': 'en',
         'РУС': 'ru',
-        'ҚАЗ': 'kz'
+        'Kgz': 'kg'
     };
 
     const langCode = imageMap[language];

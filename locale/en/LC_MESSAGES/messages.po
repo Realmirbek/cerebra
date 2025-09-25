@@ -1,0 +1,411 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-09-25 12:08+0600\n"
+"PO-Revision-Date: 2025-09-25 12:10+0600\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+
+msgid "MAIN"
+msgstr "MAIN"
+
+
+msgid "PROBLEM"
+msgstr "PROBLEM"
+
+
+msgid "AI SOLUTION"
+msgstr "AI SOLUTION"
+
+
+msgid "COMPANY"
+msgstr "COMPANY"
+
+msgid "CHARITY FOUNDATION"
+msgstr "CHARITY FOUNDATION"
+
+
+msgid "CONTACTS"
+msgstr "CONTACTS"
+
+
+msgid "MAIN"
+msgstr "MAIN"
+
+
+msgid "PROBLEM"
+msgstr "PROBLEM"
+
+
+
+msgid "AI SOLUTION"
+msgstr "AI SOLUTION"
+
+
+msgid "COMPANY"
+msgstr "COMPANY"
+
+
+
+msgid "CHARITY FOUNDATION"
+msgstr "CHARITY FOUNDATION"
+
+
+
+msgid "CONTACTS"
+msgstr "CONTACTS"
+
+
+
+
+msgid "AI-powered software for early stroke detection for faster and more accurate treatment"
+msgstr "AI-powered software for early stroke detection for faster and more accurate treatment"
+
+
+
+
+msgid "fast stroke diagnosis"
+msgstr "fast stroke diagnosis"
+
+
+
+msgid "minimisation of the human factor"
+msgstr "minimisation of the human factor"
+
+
+msgid "internal ecosystem for patients data exchange"
+msgstr "internal ecosystem for patients data exchange"
+
+
+msgid "any-time remote platform access"
+msgstr "any-time remote platform access"
+
+
+
+msgid "STROKE STATISTICS IN KAZAKHSTAN"
+msgstr "STROKE STATISTICS IN KAZAKHSTAN"
+
+
+
+msgid "cause of death"
+msgstr "cause of death"
+
+
+msgid "Kazakhstan ranks"
+msgstr "Kazakhstan ranks"
+
+
+msgid "in death statistics due to stroke"
+msgstr "in death statistics due to stroke"
+
+
+msgid "survivors have severe disabilities"
+msgstr "survivors have severe disabilities"
+
+
+msgid "THOUSAND"
+msgstr "THOUSAND"
+
+
+msgid "stroke cases annually"
+msgstr "stroke cases annually"
+
+
+msgid "likelihood of death"
+msgstr "likelihood of death"
+
+
+msgid "THOUSAND"
+msgstr "THOUSAND"
+
+
+msgid "die during the initial 10 days"
+msgstr "die during the initial 10 days"
+
+
+msgid "THOUSAND"
+msgstr "THOUSAND"
+
+
+msgid "die during the first month"
+msgstr "die during the first month"
+
+
+msgid "THOUSAND"
+msgstr "THOUSAND"
+
+
+msgid "Kazakhstanis are registered for stroke disability"
+msgstr "Kazakhstanis are registered for stroke disability"
+
+
+
+msgid "Stroke is an abrupt interruption of constant blood flow to the brain that causes damage and death of neurons in the brain."
+msgstr "Stroke is an abrupt interruption of constant blood flow to the brain that causes damage and death of neurons in the brain."
+
+
+msgid "Ischemic stroke is caused by a blockage in an artery that supplies blood to the brain. A hemorrhagic stroke happens when a blood vessel bursts, causing bleeding in the brain."
+msgstr "Ischemic stroke is caused by a blockage in an artery that supplies blood to the brain. A hemorrhagic stroke happens when a blood vessel bursts, causing bleeding in the brain."
+
+
+
+msgid "Ischemic stroke occurs much more often (more than 80% of cases) than hemorrhagic stroke."
+msgstr "Ischemic stroke occurs much more often (more than 80% of cases) than hemorrhagic stroke."
+
+
+
+
+msgid "PROBLEM"
+msgstr "PROBLEM"
+
+
+
+
+msgid "Besides the lack of highly qualified medical personnel, the main problem with stroke diagnosis lies in the inability of a human eye to detect cytotoxic edema on a CT (computed tomography) scan)"
+msgstr "Besides the lack of highly qualified medical personnel, the main problem with stroke diagnosis lies in the inability of a human eye to detect cytotoxic edema on a CT (computed tomography) scan)"
+
+
+
+msgid "QUALIFICATION GAP"
+msgstr "QUALIFICATION GAP"
+
+
+
+msgid "Shortage of medical staff and a large gap in doctors qualifications"
+msgstr "Shortage of medical staff and a large gap in doctors qualifications"
+
+
+
+msgid "HIGH BURDEN ON DOCTORS"
+msgstr "HIGH BURDEN ON DOCTORS"
+
+
+
+msgid "The overwhelmed medical staff especially during complex and conflicting cases"
+msgstr "The overwhelmed medical staff especially during complex and conflicting cases"
+
+msgid "HUMAN EYE IS UNABLE TO DETECT EMERGING STROKE ON A CT SCAN"
+msgstr "HUMAN EYE IS UNABLE TO DETECT EMERGING STROKE ON A CT SCAN"
+
+
+msgid "The human eye is unable to diagnose an emerging cytotoxic edema on a CT scan. Stroke diagnosis by a doctor is possible only after 6 hours from the symptoms onset"
+msgstr "The human eye is unable to diagnose an emerging cytotoxic edema on a CT scan. Stroke diagnosis by a doctor is possible only after 6 hours from the symptoms onset"
+
+
+msgid "NO PLATFORMS"
+msgstr "NO PLATFORMS"
+
+
+msgid "No platform for quick expertise opinion and experience exchange"
+msgstr "No platform for quick expertise opinion and experience exchange"
+
+
+msgid "Stroke's therapeutic window"
+msgstr "Stroke's therapeutic window"
+
+
+msgid "is the initial 4.5 hours after the onset of symptoms."
+msgstr "is the initial 4.5 hours after the onset of symptoms."
+
+
+msgid "SOLUTION"
+msgstr "SOLUTION"
+
+
+msgid "AI that identifies brain stroke within 10 minutes helping to prevent neurologic deficit and brain cells death -"
+msgstr "AI that identifies brain stroke within 10 minutes helping to prevent neurologic deficit and brain cells death -"
+
+
+msgid "As a result:"
+msgstr "As a result:"
+
+
+msgid "Patient receives immediate treatment"
+msgstr "Patient receives immediate treatment"
+
+
+msgid "Risks of function loss and neurologic deficit are minimised"
+msgstr "Risks of function loss and neurologic deficit are minimised"
+
+
+msgid "STANDARD PROCEDURE"
+msgstr "STANDARD PROCEDURE"
+
+
+msgid "PRODUC"
+msgstr "PRODUC"
+
+
+msgid "software is available as a web platform and a smartphone application for iOS and Android"
+msgstr "software is available as a web platform and a smartphone application for iOS and Android"
+
+
+msgid "analysis of brain damage according to the ASPECTS scale"
+msgstr "analysis of brain damage according to the ASPECTS scale"
+
+
+msgid "automation of medical guidelines"
+msgstr "automation of medical guidelines"
+
+
+msgid "COMPANY"
+msgstr "COMPANY"
+
+
+msgid "COMPANY"
+msgstr "COMPANY"
+
+
+msgid "was developed by Almaty A.I. Lab, which has been developing artificial intelligence technologies since 2018."
+msgstr "was developed by Almaty A.I. Lab, which has been developing artificial intelligence technologies since 2018."
+
+
+msgid "member of Astana Hub (the biggest international IT and startup hub in Central Asia)"
+msgstr "member of Astana Hub (the biggest international IT and startup hub in Central Asia)"
+
+
+msgid "member of AIFC (Astana International Financial Centre)"
+msgstr "member of AIFC (Astana International Financial Centre)"
+
+
+msgid "CHARITY FOUNDATION"
+msgstr "CHARITY FOUNDATION"
+
+
+msgid "CHARITY FOUNDATION"
+msgstr "CHARITY FOUNDATION"
+
+
+msgid "NeuroDamu"
+msgstr "NeuroDamu"
+
+
+msgid "is a public charity foundation dedicated to the fight against stroke. The Foundation was opened on October 29, 2021, as part of International Stroke Day"
+msgstr "is a public charity foundation dedicated to the fight against stroke. The Foundation was opened on October 29, 2021, as part of International Stroke Day"
+
+
+msgid "The Foundation is committed to develop a comprehensive solution to the problems surrounding the diagnosis and treatment of stroke."
+msgstr "The Foundation is committed to develop a comprehensive solution to the problems surrounding the diagnosis and treatment of stroke."
+
+msgid "The objectives of the foundation are:"
+msgstr "The objectives of the foundation are:"
+
+msgid "Supporting innovative technologies that help in the fight against stroke;"
+msgstr "Supporting innovative technologies that help in the fight against stroke;"
+
+
+msgid "Working with the public to raise awareness about risk factors, methods of prevention and self-diagnosis of stroke;"
+msgstr "Working with the public to raise awareness about risk factors, methods of prevention and self-diagnosis of stroke;"
+
+
+msgid "Supporting medical students, medical residents, postgraduate students and medical researchers to help in the fight against stroke."
+msgstr "Supporting medical students, medical residents, postgraduate students and medical researchers to help in the fight against stroke."
+
+
+msgid "The Foundation is a completely non-profit organization supported by voluntary contributions."
+msgstr "The Foundation is a completely non-profit organization supported by voluntary contributions."
+
+
+msgid "Why did the medical startup Cerebra receive $1 million from Timur Turlov"
+msgstr "Why did the medical startup Cerebra receive $1 million from Timur Turlov"
+
+
+msgid "Medicine of the future with CEREBRA"
+msgstr "Medicine of the future with CEREBRA"
+
+
+msgid "How does the Kazakh startup use artificial intelligence for early diagnosis of stroke"
+msgstr "How does the Kazakh startup use artificial intelligence for early diagnosis of stroke"
+
+
+
+msgid "How does the Kazakh startup use artificial intelligence for early diagnosis of stroke"
+msgstr "How does the Kazakh startup use artificial intelligence for early diagnosis of stroke"
+
+
+
+msgid "Finalists EMERGE Challenge 2021"
+msgstr "Finalists EMERGE Challenge 2021"
+
+
+
+msgid "TOP 5 of 700 startups"
+msgstr "TOP 5 of 700 startups"
+
+
+
+msgid "TOP 10 best startups of 2020 by Astana Hub"
+msgstr "TOP 10 best startups of 2020 by Astana Hub"
+
+
+msgid "Finalists of Kazakhstan Digital Accelerator"
+msgstr "Finalists of Kazakhstan Digital Accelerator"
+
+
+msgid "Venture capital investment of $ 50 000"
+msgstr "Venture capital investment of $ 50 000"
+
+
+
+msgid "CONTACTS"
+msgstr "CONTACTS"
+
+
+
+msgid "CEREBRA.AI LTD"
+msgstr "CEREBRA.AI LTD"
+
+
+msgid "© 2025 CEREBRA.AI LTD"
+msgstr "© 2025 CEREBRA.AI LTD"
+
+
+
+msgid "SOCIAL NETWORKS"
+msgstr "SOCIAL NETWORKS"
+
+
+
+msgid "OFFICE HOURS"
+msgstr "OFFICE HOURS"
+
+
+
+msgid "Mon-Fri 10:00-19:00"
+msgstr "Mon-Fri 10:00-19:00"
+
+
+msgid "ADDRESS"
+msgstr "ADDRESS"
+
+
+msgid "Republic of Kazakhstan"
+msgstr "Republic of Kazakhstan"
+
+
+msgid "Almaty city"
+msgstr "Almaty city"
+
+
+msgid "Dostyk Avenue 210A"
+msgstr "Dostyk Avenue 210A"
+
+
+msgid "KOKTEM GRAND 5th floor, office 53"
+msgstr "KOKTEM GRAND 5th floor, office 53"
+
+
+
+
+
+
+
+

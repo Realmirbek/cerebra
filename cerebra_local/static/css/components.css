@@ -11,7 +11,7 @@
     left: 0;
     width: 100%;
     background: rgba(10,10,10,1);
-    z-index: -10 ; /* вместо -10 */
+    z-index: -10 ;
 }
 .logo img {
     transition: transform 0.3s ease;

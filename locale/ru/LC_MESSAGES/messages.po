@@ -1,0 +1,364 @@
+msgid ""
+msgstr ""
+
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-09-25 12:08+0600\n"
+"PO-Revision-Date: 2025-09-25 12:10+0600\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: ru\n"
+"Language-Team: ru <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+
+
+
+
+
+msgid "MAIN"
+msgstr "ОСНОВНОЙ"
+
+
+msgid "PROBLEM"
+msgstr "ПРОБЛЕМА"
+
+
+msgid "AI SOLUTION"
+msgstr "ИИ-РЕШЕНИЕ"
+
+
+msgid "COMPANY"
+msgstr "КОМПАНИЯ"
+
+msgid "CHARITY FOUNDATION"
+msgstr "БЛАГОТВОРИТЕЛЬНЫЙ ФОНД"
+
+
+msgid "CONTACTS"
+msgstr "КОНТАКТЫ"
+
+
+msgid "MAIN"
+msgstr "ОСНОВНОЙ"
+
+
+msgid "PROBLEM"
+msgstr "ПРОБЛЕМА"
+
+
+
+msgid "AI SOLUTION"
+msgstr "ИИ-РЕШЕНИЕ"
+
+
+msgid "COMPANY"
+msgstr "КОМПАНИЯ"
+
+
+
+msgid "CHARITY FOUNDATION"
+msgstr "БЛАГОТВОРИТЕЛЬНЫЙ ФОНД"
+
+
+
+msgid "CONTACTS"
+msgstr "КОНТАКТЫ"
+
+
+
+
+msgid "AI-powered software for early stroke detection for faster and more accurate treatment"
+msgstr "Программное обеспечение на базе искусственного интеллекта для раннего выявления инсульта с целью более быстрого и точного лечения"
+
+
+
+
+msgid "fast stroke diagnosis"
+msgstr "быстрая диагностика инсульта"
+
+
+
+msgid "minimisation of the human factor"
+msgstr "минимизация человеческого фактора"
+
+
+msgid "internal ecosystem for patients data exchange"
+msgstr "внутренняя экосистема для обмена данными пациентов"
+
+
+msgid "any-time remote platform access"
+msgstr "удаленный доступ к платформе в любое время"
+
+
+
+msgid "STROKE STATISTICS IN KAZAKHSTAN"
+msgstr "СТАТИСТИКА ИНСУЛЬТА В КАЗАХСТАНЕ"
+
+
+
+msgid "cause of death"
+msgstr "причина смерти"
+
+
+msgid "Kazakhstan ranks"
+msgstr "Казахстан занимает"
+
+
+msgid "in death statistics due to stroke"
+msgstr "в статистике смертности от инсульта"
+
+
+msgid "survivors have severe disabilities"
+msgstr "выжившие имеют серьезные нарушения"
+
+
+msgid "THOUSAND"
+msgstr "ТЫСЯЧА"
+
+
+msgid "stroke cases annually"
+msgstr "случаев инсульта ежегодно"
+
+
+msgid "likelihood of death"
+msgstr "случаев инсульта ежегодно"
+
+
+msgid "THOUSAND"
+msgstr "ТЫСЯЧА"
+
+
+msgid "die during the initial 10 days"
+msgstr "умирают в течение первых 10 дней"
+
+
+msgid "THOUSAND"
+msgstr "ТЫСЯЧА"
+
+
+msgid "die during the first month"
+msgstr "умереть в течение первого месяца"
+
+
+msgid "THOUSAND"
+msgstr "ТЫСЯЧА"
+
+
+msgid "Kazakhstanis are registered for stroke disability"
+msgstr "Казахстанцы поставлены на учет по инвалидности после инсульта"
+
+
+
+msgid "Stroke is an abrupt interruption of constant blood flow to the brain that causes damage and death of neurons in the brain."
+msgstr "Инсульт — это внезапное прекращение постоянного притока крови к мозгу, которое приводит к повреждению и гибели нейронов в мозге."
+
+
+msgid "Ischemic stroke is caused by a blockage in an artery that supplies blood to the brain. A hemorrhagic stroke happens when a blood vessel bursts, causing bleeding in the brain."
+msgstr "Ишемический инсульт возникает из-за закупорки артерии, снабжающей кровью мозг. Геморрагический инсульт происходит, когда кровеносный сосуд разрывается, вызывая кровоизлияние в мозг."
+
+
+
+msgid "Ischemic stroke occurs much more often (more than 80%% of cases) than hemorrhagic stroke."
+msgstr "Ишемический инсульт встречается значительно чаще (более 80%% случаев), чем геморрагический инсульт."
+
+
+
+
+msgid "PROBLEM"
+msgstr "ПРОБЛЕМА"
+
+
+
+
+msgid "Besides the lack of highly qualified medical personnel, the main problem with stroke diagnosis lies in the inability of a human eye to detect cytotoxic edema on a CT (computed tomography) scan)"
+msgstr "Помимо нехватки высококвалифицированных медицинских кадров, основная проблема диагностики инсульта заключается в неспособности человеческого глаза обнаружить цитотоксический отек на КТ (компьютерной томографии)."
+
+
+
+msgid "QUALIFICATION GAP"
+msgstr "РАЗРЫВ В КВАЛИФИКАЦИИ"
+
+
+
+msgid "Shortage of medical staff and a large gap in doctors qualifications"
+msgstr "Нехватка медицинских кадров и большой разрыв в квалификации врачей"
+
+
+
+msgid "HIGH BURDEN ON DOCTORS"
+msgstr "ВЫСОКАЯ НАГРУЗКА НА ВРАЧЕЙ"
+
+
+
+msgid "The overwhelmed medical staff especially during complex and conflicting cases"
+msgstr "Перегруженность медицинского персонала, особенно во время сложных и противоречивых случаев"
+
+msgid "HUMAN EYE IS UNABLE TO DETECT EMERGING STROKE ON A CT SCAN"
+msgstr "Человеческий глаз не способен обнаружить начинающийся инсульт на компьютерной томографии"
+
+
+msgid "The human eye is unable to diagnose an emerging cytotoxic edema on a CT scan. Stroke diagnosis by a doctor is possible only after 6 hours from the symptoms onset"
+msgstr "Человеческий глаз не способен диагностировать развивающийся цитотоксический отёк на КТ. Диагностика инсульта врачом возможна только через 6 часов после появления симптомов."
+
+
+msgid "NO PLATFORMS"
+msgstr "НЕТ ПЛАТФОРМ"
+
+
+msgid "No platform for quick expertise opinion and experience exchange"
+msgstr "Отсутствие платформы для быстрого обмена экспертными мнениями и опытом"
+
+
+msgid "Stroke's therapeutic window"
+msgstr "Терапевтическое окно инсульта"
+
+
+msgid "is the initial 4.5 hours after the onset of symptoms."
+msgstr "первые 4,5 часа после появления симптомов."
+
+
+msgid "SOLUTION"
+msgstr "РЕШЕНИЕ"
+
+
+msgid "AI that identifies brain stroke within 10 minutes helping to prevent neurologic deficit and brain cells death -"
+msgstr "ИИ, который распознает инсульт мозга в течение 10 минут, помогая предотвратить неврологический дефицит и гибель клеток мозга."
+
+
+msgid "As a result:"
+msgstr "Как результат:"
+
+
+msgid "Patient receives immediate treatment"
+msgstr "Пациент получает немедленное лечение"
+
+
+msgid "Risks of function loss and neurologic deficit are minimised"
+msgstr "Риски потери функций и неврологического дефицита сведены к минимуму"
+
+
+msgid "STANDARD PROCEDURE"
+msgstr "СТАНДАРТНАЯ ПРОЦЕДУРА"
+
+
+msgid "PRODUC"
+msgstr "ПРОДУКТ"
+
+
+msgid "software is available as a web platform and a smartphone application for iOS and Android"
+msgstr "программное обеспечение доступно в виде веб-платформы и приложения для смартфонов на iOS и Android"
+
+
+msgid "analysis of brain damage according to the ASPECTS scale"
+msgstr "анализ поражения головного мозга по шкале ASPECTS"
+
+
+msgid "automation of medical guidelines"
+msgstr "автоматизация медицинских руководств"
+
+
+msgid "COMPANY"
+msgstr "КОМПАНИЯ"
+
+
+msgid "COMPANY"
+msgstr "КОМПАНИЯ"
+
+
+msgid "was developed by Almaty A.I. Lab, which has been developing artificial intelligence technologies since 2018."
+msgstr "разработано Almaty A.I. Lab, которая разрабатывает технологии искусственного интеллекта с 2018 года."
+
+msgid "member of Astana Hub (the biggest international IT and startup hub in Central Asia)"
+msgstr "член Astana Hub (крупнейший международный IT и стартап-хаб в Центральной Азии)"
+
+msgid "member of AIFC (Astana International Financial Centre)"
+msgstr "член AIFC (Астана Международный Финансовый Центр)"
+
+msgid "CHARITY FOUNDATION"
+msgstr "БЛАГОТВОРИТЕЛЬНЫЙ ФОНД"
+
+msgid "NeuroDamu"
+msgstr "NeuroDamu"
+
+msgid "is a public charity foundation dedicated to the fight against stroke. The Foundation was opened on October 29, 2021, as part of International Stroke Day"
+msgstr "является публичным благотворительным фондом, посвящённым борьбе с инсультом. Фонд открыт 29 октября 2021 года в рамках Международного дня инсульта"
+
+msgid "The Foundation is committed to develop a comprehensive solution to the problems surrounding the diagnosis and treatment of stroke."
+msgstr "Фонд стремится разработать комплексное решение проблем диагностики и лечения инсульта."
+
+msgid "The objectives of the foundation are:"
+msgstr "Цели фонда:"
+
+msgid "Supporting innovative technologies that help in the fight against stroke;"
+msgstr "Поддержка инновационных технологий, помогающих в борьбе с инсультом;"
+
+msgid "Working with the public to raise awareness about risk factors, methods of prevention and self-diagnosis of stroke;"
+msgstr "Работа с общественностью по повышению осведомлённости о факторах риска, методах профилактики и самодиагностики инсульта;"
+
+msgid "Supporting medical students, medical residents, postgraduate students and medical researchers to help in the fight against stroke."
+msgstr "Поддержка студентов-медиков, ординаторов, аспирантов и медицинских исследователей в борьбе с инсультом."
+
+msgid "The Foundation is a completely non-profit organization supported by voluntary contributions."
+msgstr "Фонд является полностью некоммерческой организацией, поддерживаемой за счёт добровольных взносов."
+
+msgid "Why did the medical startup Cerebra receive $1 million from Timur Turlov"
+msgstr "Почему медицинский стартап Cerebra получил 1 миллион долларов от Тимура Турлова"
+
+msgid "Medicine of the future with CEREBRA"
+msgstr "Медицина будущего с CEREBRA"
+
+msgid "How does the Kazakh startup use artificial intelligence for early diagnosis of stroke"
+msgstr "Как казахстанский стартап использует искусственный интеллект для ранней диагностики инсульта"
+
+msgid "Finalists EMERGE Challenge 2021"
+msgstr "Финалисты EMERGE Challenge 2021"
+
+msgid "TOP 5 of 700 startups"
+msgstr "ТОП-5 из 700 стартапов"
+
+msgid "TOP 10 best startups of 2020 by Astana Hub"
+msgstr "ТОП-10 лучших стартапов 2020 по версии Astana Hub"
+
+msgid "Finalists of Kazakhstan Digital Accelerator"
+msgstr "Финалисты Kazakhstan Digital Accelerator"
+
+msgid "Venture capital investment of $ 50 000"
+msgstr "Венчурные инвестиции в размере 50 000 долларов"
+
+msgid "CONTACTS"
+msgstr "КОНТАКТЫ"
+
+msgid "CEREBRA.AI LTD"
+msgstr "CEREBRA.AI LTD"
+
+msgid "© 2025 CEREBRA.AI LTD"
+msgstr "© 2025 CEREBRA.AI LTD"
+
+msgid "SOCIAL NETWORKS"
+msgstr "СОЦИАЛЬНЫЕ СЕТИ"
+
+msgid "OFFICE HOURS"
+msgstr "ЧАСЫ РАБОТЫ"
+
+msgid "Mon-Fri 10:00-19:00"
+msgstr "Пн-Пт 10:00-19:00"
+
+msgid "ADDRESS"
+msgstr "АДРЕС"
+
+msgid "Republic of Kazakhstan"
+msgstr "Республика Казахстан"
+
+msgid "Almaty city"
+msgstr "город Алматы"
+
+msgid "Dostyk Avenue 210A"
+msgstr "проспект Достык 210А"
+
+msgid "KOKTEM GRAND 5th floor, office 53"
+msgstr "KOKTEM GRAND, 5 этаж, офис 53"
